@@ -1,14 +1,12 @@
-// Import Express
-const express = require('express');
-// Create router object
+// import express
+const express = require("express");
+// create router object
 const router = express.Router();
-// Configure middlewares
-// All paths here are relative to /About
-// GET handler for /About/
-// root of about section
-router.get('/', (req, res, next) =>{
-    res.render('about', { title: 'About Us'});
-} );
-
-// Export it
+// configure router object (associate middlewares to paths)
+// All paths in here are relative to /about
+// GET handler for /about/
+router.get("/", (req, res, next) => {
+  res.render("about", { title: "About Us" });
+});
+// export router object
 module.exports = router;
